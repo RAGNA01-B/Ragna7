@@ -15,7 +15,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   const oi = `𝙼𝙴𝙽𝚂𝙰𝙹𝙴:  ${pesan}`;
   let teks = `*${global.etiqueta}*\n${oi}\n\n❄𝙱𝙾𝚃𝚂:❄\n`;
   for (const mem of participants) {
-    teks += `❄ ${global.emojietiqueta} @${mem.id.split('@')[0]}\n`;
+    teks += `${global.emojietiqueta} @${mem.id.split('@')[0]}\n`;
   }
   teks += `${global.packname}`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
